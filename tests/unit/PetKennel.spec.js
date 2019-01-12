@@ -7,7 +7,7 @@ jest.mock("axios", () => ({
 }));
 
 describe("PetKennel", () => {
-  it("calls axios GET and updates the data object with GET results", (done) => {
+  it("calls axios GET, updates the data object with results, results are propagated to Child", (done) => {
     const wrapper = mount(PetKennel, {
       data () {
         return {
