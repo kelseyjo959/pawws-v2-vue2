@@ -30,12 +30,10 @@ export default {
         }
       })
         .then((response) => {
+          console.log("I was set");
           this.pets = response.data;
         }) 
-        // (error) => {
-        //   // eslint-disable-next-line
-        //   console.log(error);
-        // })
+        .catch(error => console.log(error));
     }
   }
 }
