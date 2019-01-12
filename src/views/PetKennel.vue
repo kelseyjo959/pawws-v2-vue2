@@ -21,7 +21,6 @@ export default {
   },
   methods: {
     getPets: function () {
-      console.log('I was clicked')
       return axios.get('http://localhost:3000/getPets', {
         headers: {
           "screenSize": window.width,
@@ -30,7 +29,6 @@ export default {
         }
       })
         .then((response) => {
-          console.log("I was set");
           this.pets = response.data;
         }) 
         .catch(error => console.log(error));
