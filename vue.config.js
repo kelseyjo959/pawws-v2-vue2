@@ -1,3 +1,8 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: true,
+  pwa: {
+    iconPaths: {
+       favicon32: 'img/icons/myFavicon.png',
+    }
+  }
 };
