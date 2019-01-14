@@ -7,32 +7,33 @@
 </template>
 
 <script>
-import axios from 'axios';
-import PetDetails from '../components/PetDetails.vue'
+import axios from "axios";
+import PetDetails from "../components/PetDetails.vue";
 export default {
-  name: 'pet-kennel',
+  name: "pet-kennel",
   components: {
     PetDetails
   },
-  data () {
+  data() {
     return {
       pets: []
-    }
+    };
   },
   methods: {
-    getPets: function () {
-      return axios.get('http://localhost:3000/getPets', {
-        headers: {
-          "screenSize": window.width,
-          "shelter": "",
-          "count": 0,
-        }
-      })
-        .then((response) => {
+    getPets: function() {
+      return axios
+        .get("http://localhost:3000/getPets", {
+          headers: {
+            screenSize: window.width,
+            shelter: "",
+            count: 0
+          }
+        })
+        .then(response => {
           this.pets = response.data;
-        }) 
+        })
         .catch(error => console.log(error));
     }
   }
-}
+};
 </script>
