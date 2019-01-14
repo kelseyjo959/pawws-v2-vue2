@@ -2,7 +2,9 @@
   <div class="pet-kennel">
     <h1>This the pets page</h1>
     <button v-on:click="getPets">Click for pets</button>
-    <PetDetails v-for="pet in pets" :key="pet.name" :pet="pet" />
+    <div class="pet-container">
+      <PetDetails v-for="pet in pets" :key="pet.name" :pet="pet" />
+    </div>
   </div>
 </template>
 
@@ -37,3 +39,11 @@ export default {
   }
 };
 </script>
+
+<style>
+.pet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>

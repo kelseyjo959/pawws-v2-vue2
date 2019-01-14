@@ -1,6 +1,6 @@
 <template>
   <div class="pet">
-    <md-card>
+    <md-card md-with-hover>
       <md-card-media>
         <img v-bind:src="pet.img_url" />
       </md-card-media>
@@ -16,13 +16,12 @@
 
       <md-card-expand>
         <div>
-          <md-button>Adopt me!</md-button>
+          <md-button  class="md-raised md-primary">Adopt me!</md-button>
         </div>
       </md-card-expand>
     </md-card>
   </div>
 </template>
-
 <script>
 export default {
   name: "PetDetails",
@@ -32,9 +31,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .pet {
-  height: 480px;
+  display: flex;
+  justify-content: center;
 }
 
 .md-card {
