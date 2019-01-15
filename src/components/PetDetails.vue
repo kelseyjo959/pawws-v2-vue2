@@ -16,7 +16,7 @@
 
       <md-card-expand>
         <div>
-          <md-button  class="md-raised md-primary">Adopt me!</md-button>
+          <md-button v-bind:href="pet.profile_url" class="md-raised md-primary">Adopt me!</md-button>
         </div>
       </md-card-expand>
     </md-card>
