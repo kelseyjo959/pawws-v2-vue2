@@ -2,8 +2,6 @@ import { mount } from "@vue/test-utils";
 import axios from "axios";
 import PetKennel from "@/views/PetKennel.vue";
 
-
-
 jest.mock("axios", () => ({
   get: jest.fn(() =>
     Promise.resolve({ data: [{ name: "Sloppy" }, { name: "Floppy" }] })

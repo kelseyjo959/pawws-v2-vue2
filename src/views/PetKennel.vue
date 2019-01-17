@@ -1,10 +1,12 @@
 <template>
   <div class="pet-kennel">
+    <md-content>
     <h1>This the pets page</h1>
     <button v-on:click="getPets">Click for pets</button>
     <div class="pet-container">
       <PetDetails v-for="pet in pets" :key="pet.name" :pet="pet" />
     </div>
+    </md-content>
   </div>
 </template>
 
@@ -40,7 +42,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "~vue-material/dist/theme/engine";
+@include md-register-theme(
+  "default",
+  (
+    background: md-get-palette-color(grey, 400)
+  )
+);
+@import "~vue-material/dist/theme/all";
 .pet-container {
   display: flex;
   flex-wrap: wrap;

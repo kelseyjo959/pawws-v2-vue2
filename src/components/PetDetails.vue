@@ -1,6 +1,6 @@
 <template>
   <div class="pet">
-    <md-card md-with-hover>
+    <md-card md-with-hover md-theme="default-card" class="md-primary">
       <md-card-media>
         <img v-bind:src="pet.img_url" />
       </md-card-media>
@@ -16,7 +16,7 @@
 
       <md-card-expand>
         <div>
-          <md-button v-bind:href="pet.profile_url" class="md-raised md-primary">Adopt me!</md-button>
+          <md-button v-bind:href="pet.profile_url" md-theme="default-card" class="md-accent md-raised">Adopt me!</md-button>
         </div>
       </md-card-expand>
     </md-card>
@@ -31,7 +31,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "~vue-material/dist/theme/engine";
+@include md-register-theme(
+  "default-card",
+  (
+    primary: md-get-palette-color(cyan, 800),
+    accent: md-get-palette-color(brown, 500)
+  )
+);
+@import "~vue-material/dist/theme/all";
 .pet {
   display: flex;
   justify-content: center;
