@@ -3,10 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import VueMaterial from "vue-material";
 import "vue-material/dist/vue-material.css";
+import { MdButton, MdCard } from "vue-material/dist/components";
 import "./registerServiceWorker";
 
-Vue.config.productionTip = false;
 Vue.use(VueMaterial);
+Vue.use(MdButton);
+Vue.use(MdCard);
 
 new Vue({
   router,
