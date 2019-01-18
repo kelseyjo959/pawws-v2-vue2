@@ -2,7 +2,6 @@
   <div class="pet-kennel">
     <md-content>
     <h1>This the pets page</h1>
-    <button v-on:click="getPets">Click for pets</button>
     <div class="pet-container">
       <PetDetails v-for="pet in pets" :key="pet.name" :pet="pet" />
     </div>
@@ -23,21 +22,19 @@ export default {
       pets: []
     };
   },
-  methods: {
-    getPets: function() {
-      return axios
-        .get("http://localhost:3000/getPets", {
-          headers: {
-            screenSize: window.width,
-            shelter: "",
-            count: 0
-          }
-        })
-        .then(response => {
-          this.pets = response.data;
-        })
-        .catch(error => console.log(error));
-    }
+  created() {
+    axios
+      .get("http://localhost:3000/getPets", {
+        headers: {
+          screenSize: window.width,
+          shelter: "",
+          count: 0
+        }
+      })
+      .then(response => {
+        this.pets = response.data;
+      })
+      .catch(error => console.log(error));
   }
 };
 </script>
