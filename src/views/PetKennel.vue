@@ -43,14 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~vue-material/dist/theme/engine";
-@include md-register-theme(
-  "default",
-  (
-    background: md-get-palette-color(grey, 400)
-  )
-);
-@import "~vue-material/dist/theme/all";
 .pet-container {
   display: flex;
   flex-wrap: wrap;
