@@ -6,7 +6,7 @@
       <md-card-header>
         <div class="md-title">Material Design with Vue.js 2 Demo</div>
         <div class="md-subhead">by CodingTheSmartWay.com</div>
-        <md-button class="md-raised md-primary">Test Button</md-button>
+        <md-button md-theme="default-app" class="md-raised md-primary">Test Button</md-button>
       </md-card-header>
     </md-card>
   </div>
@@ -23,3 +23,20 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "~vue-material/dist/theme/engine";
+@include md-register-theme(
+  "default",
+  (
+    primary: md-get-palette-color(cyan, 800),
+    accent: md-get-palette-color(brown, 500),
+    theme: light
+  )
+);
+@import "~vue-material/dist/components/MdCard/theme";
+.md-card {
+  width: 500px;
+  display: inline-block;
+}
+</style>
