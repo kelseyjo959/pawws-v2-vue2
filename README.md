@@ -29,6 +29,7 @@ npm run lint
 ```
 npm run test:unit
 ```
+Bug fix for [vue-warn]: Unknown custom element => node_modules/vue/dist/vue.runtime.common.js  line 401
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
