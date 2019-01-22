@@ -1,22 +1,18 @@
 <template>
   <div id="app" md-theme="default-app" class="background">
-    <div id="nav">
-      <md-button md-theme="default-app" class="md-flat md-primary">
-        <router-link to="/">Home</router-link>
-      </md-button>
-      <md-button md-theme="default-app" class="md-flat md-primary">
-        <router-link to="/about">About</router-link>
-      </md-button>
-      <md-button md-theme="default-app" class="md-flat md-primary">
-        <router-link to="/pets">Pets</router-link>
-      </md-button>
-      <md-button md-theme="default-app" class="md-flat md-primary">
-        <router-link to="/shelters">Shelters</router-link>
-      </md-button>
-    </div>
-    <router-view/>
+    <Navigation />
   </div>
 </template>
+
+<script>
+import Navigation from "@/components/Navigation.vue";
+
+export default {
+  components: {
+    Navigation
+  }
+};
+</script>
 
 <style lang="scss">
 html {
