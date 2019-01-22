@@ -18,8 +18,6 @@ describe("PetKennel", () => {
       }
     });
 
-    // wrapper.find("button").trigger("click");
-
     wrapper.vm.$nextTick(() => {
       expect(axios.get).toBeCalledWith("http://localhost:3000/getPets", {
         headers: {
