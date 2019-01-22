@@ -10,6 +10,9 @@
       <md-button md-theme="default-app" class="md-flat md-primary">
         <router-link to="/pets">Pets</router-link>
       </md-button>
+      <md-button md-theme="default-app" class="md-flat md-primary">
+        <router-link to="/shelters">Shelters</router-link>
+      </md-button>
     </div>
     <router-view/>
   </div>

@@ -20,6 +20,11 @@ export default new Router({
       path: "/pets",
       name: "pet-kennel",
       component: () => import("./views/PetKennel.vue")
+    },
+    {
+      path: "/shelters",
+      name: "shelters",
+      component: () => import("./views/Shelters.vue")
     }
   ]
 });
