@@ -16,6 +16,7 @@
         <md-icon>home</md-icon>
         <router-link to="/">Home</router-link>
       </md-button>
+
       <md-list>
         <md-list-item>
           <router-link exact to="/">
@@ -23,6 +24,7 @@
             <span>My Profile</span>
           </router-link>
         </md-list-item>
+
         <md-list-item>
           <md-icon>home</md-icon>
           <span class="md-list-item-text">
