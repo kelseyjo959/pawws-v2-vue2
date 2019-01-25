@@ -12,47 +12,73 @@
         <span class="md-title">Navigation</span>
       </md-toolbar>
 
+    <md-list>
+      <!-- with icons but not happy -->
+      <md-list-item>
       <md-button>
-        <md-icon>home</md-icon>
+        <md-icon class="icon-link">home</md-icon>
         <router-link to="/">Home</router-link>
       </md-button>
+      </md-list-item>
+
+      <md-list-item>
+       <md-button>
+        <md-icon class="icon-link">school</md-icon>
+        <router-link to="/about">About</router-link>
+      </md-button>
+      </md-list-item>
+
+      <md-list-item>
+       <md-button>
+        <md-icon class="icon-link">location_city</md-icon>
+        <router-link to="/shelters">Shelters</router-link>
+      </md-button>
+      </md-list-item>
+
+      <md-list-item>
+        <span>
+        <md-button>
+          <md-icon class="icon-link">pets</md-icon>
+          <router-link to="/pets">Pets</router-link>
+        </md-button>
+
+        </span>
+      </md-list-item>
+    </md-list>
 
       <md-list>
+        <!-- happy -->
+        <md-list-item >
+          <span md-theme="nav" class="md-list-item-text md-button md-primary">
+            <router-link to="/" class="link md-button">Home</router-link>
+          </span>
+        </md-list-item>
+
         <md-list-item>
-          <router-link exact to="/">
-            <md-icon class="md-primary">person</md-icon>
-            <span>My Profile</span>
+          <span class="md-list-item-text md-button">
+            <router-link to="/about" class="link md-button">About</router-link>
+          </span>
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list-item-text md-button">
+            <router-link to="/shelters" class="link md-button">Shelters</router-link>
+          </span>
+        </md-list-item>
+
+        <md-list-item>
+          <span class="md-list-item-text md-button">
+            <router-link to="/pets" class="link md-button">Pets</router-link>
+          </span>
+        </md-list-item>
+
+        <md-list-item>
+          <!-- unhappy -->
+          <router-link to="/pets">
+            <md-button>Pets</md-button>
           </router-link>
         </md-list-item>
-
-        <md-list-item>
-          <md-icon>home</md-icon>
-          <span class="md-list-item-text">
-            <router-link to="/" active-class="active">Home</router-link>
-          </span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>school</md-icon>
-          <span class="md-list-item-text">
-            <router-link to="/about" active-class="active">About</router-link>
-          </span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>location_city</md-icon>
-          <span class="md-list-item-text">
-            <router-link to="/shelters" active-class="active">Shelters</router-link>
-          </span>
-        </md-list-item>
-
-        <md-list-item>
-          <md-icon>pets</md-icon>
-          <span class="md-list-item-text">
-            <router-link to="/pets" class="md-button"><a>Pets</a></router-link>
-          </span>
-        </md-list-item>
-      </md-list>
+       </md-list>
     </md-drawer>
     <router-view/>
   </div>
@@ -82,11 +108,16 @@ export default {
   width: 230px;
   max-width: calc(100vw - 125px);
 }
-.md-card {
-  width: 500px;
-  display: inline-block;
+.md-list-item-text {
+  display: flex;
+  align-content: center;
 }
-.md-content {
-  padding: 16px;
+.icon-link {
+  padding-right: 50px;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 </style>
