@@ -1,5 +1,5 @@
 <template>
-  <div class="pet">
+  <div class="pet-details">
     <md-card md-with-hover md-theme="default-card" class="md-primary">
       <md-card-media>
         <img v-bind:src="pet.img_url" />
@@ -37,7 +37,7 @@ export default {
   )
 );
 @import "~vue-material/dist/theme/all";
-.pet {
+.pet-details {
   display: flex;
   justify-content: center;
 }

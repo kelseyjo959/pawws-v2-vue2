@@ -13,7 +13,7 @@
 import axios from "axios";
 import PetDetails from "../components/PetDetails.vue";
 export default {
-  name: "pet-kennel",
+  name: "PetKennel",
   components: {
     PetDetails
   },

@@ -11,7 +11,7 @@ import StrayRescue from "../components/StrayRescue.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "shelters",
+  name: "Shelters",
   components: {
     HelloWorld,
     StrayRescue
