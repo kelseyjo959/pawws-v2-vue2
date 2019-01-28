@@ -10,32 +10,38 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
+import { mapState } from "vuex";
 import PetDetails from "../components/PetDetails.vue";
 export default {
   name: "PetKennel",
   components: {
     PetDetails
   },
-  data() {
-    return {
-      pets: []
-    };
+  mounted() {
+    this.$store.dispatch("test");
+    // this.$store.dispatch("getPets");
   },
-  created() {
-    axios
-      .get("http://localhost:3000/getPets", {
-        headers: {
-          screenSize: window.width,
-          shelter: "",
-          count: 0
-        }
-      })
-      .then(response => {
-        this.pets = response.data;
-      })
-      .catch(error => console.log(error));
-  }
+  computed: mapState(["pets"])
+  // data() {
+  //   return {
+  //     pets: []
+  //   };
+  // },
+  // created() {
+  //   axios
+  //     .get("http://localhost:3000/getPets", {
+  //       headers: {
+  //         screenSize: window.width,
+  //         shelter: "",
+  //         count: 0
+  //       }
+  //     })
+  //     .then(response => {
+  //       this.pets = response.data;
+  //     })
+  //     .catch(error => console.log(error));
+  // }
 };
 </script>
 
