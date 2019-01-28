@@ -1,6 +1,6 @@
 <template>
   <div class="shelters">
-    <md-tabs md-theme="default-app" class="md-primary" md-alignment="centered">
+    <md-tabs md-theme="default-app" class="md-accent" md-alignment="centered">
       <md-tab md-label="Stray Rescue"> 
         <StrayRescue />
       </md-tab>
