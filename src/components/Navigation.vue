@@ -17,7 +17,7 @@
       <md-list-item>
       <md-button>
         <md-icon class="icon-link">home</md-icon>
-        <router-link to="/">Home</router-link>
+        <router-link to="/" active-class="active">Home</router-link>
       </md-button>
       </md-list-item>
 
@@ -50,7 +50,7 @@
         <!-- happy -->
         <md-list-item >
           <span md-theme="nav" class="md-list-item-text md-button md-primary">
-            <router-link to="/" class="link md-button">Home</router-link>
+            <router-link to="/" active-class="active" class="link md-button">Home</router-link>
           </span>
         </md-list-item>
 
