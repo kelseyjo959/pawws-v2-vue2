@@ -2,14 +2,13 @@
   <div class="shelters">
     <md-tabs md-theme="default-app" class="md-primary" md-alignment="centered">
       <md-tab md-label="Stray Rescue"> 
-        Content 0
         <StrayRescue />
       </md-tab>
       <md-tab md-label="Young At Heart">
-        Content 1
+        <YoungAtHeart />
       </md-tab>
-      <md-tab md-label="New York">
-        Content 2
+      <md-tab md-label="NYC Shelter Buddy">
+        <NYCShelterBuddy />
       </md-tab>
     </md-tabs>
   </div>
@@ -17,11 +16,15 @@
 
 <script>
 import StrayRescue from "../components/StrayRescue.vue";
+import YoungAtHeart from "../components/YoungAtHeart.vue";
+import NYCShelterBuddy from "../components/NYCShelterBuddy";
 
 export default {
   name: "Shelters",
   components: {
-    StrayRescue
+    StrayRescue,
+    YoungAtHeart,
+    NYCShelterBuddy
   }
 };
 </script>
