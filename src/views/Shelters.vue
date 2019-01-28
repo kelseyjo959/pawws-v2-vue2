@@ -1,19 +1,26 @@
 <template>
   <div class="shelters">
-    <p>This is the shelter page</p>
-    <StrayRescue />
-    <HelloWorld msg="Hello" />
+    <md-tabs md-theme="default-app" class="md-primary" md-alignment="centered">
+      <md-tab md-label="Stray Rescue"> 
+        Content 0
+        <StrayRescue />
+      </md-tab>
+      <md-tab md-label="Young At Heart">
+        Content 1
+      </md-tab>
+      <md-tab md-label="New York">
+        Content 2
+      </md-tab>
+    </md-tabs>
   </div>
 </template>
 
 <script>
 import StrayRescue from "../components/StrayRescue.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Shelters",
   components: {
-    HelloWorld,
     StrayRescue
   }
 };
