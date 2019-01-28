@@ -1,16 +1,14 @@
 <template>
   <div class="home">
-    <md-content>
-      <img alt="Vue logo" src="../assets/logo.png">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <md-card md-theme="home">
-        <md-card-header>
-          <div class="md-title">Material Design with Vue.js 2 Demo</div>
-          <div class="md-subhead">by CodingTheSmartWay.com</div>
-          <md-button md-theme="default-app" class="md-raised md-primary">Test Button</md-button>
-        </md-card-header>
-      </md-card>
-    </md-content>
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <md-card md-theme="home">
+      <md-card-header>
+        <div class="md-title">Material Design with Vue.js 2 Demo</div>
+        <div class="md-subhead">by CodingTheSmartWay.com</div>
+        <md-button class="md-raised md-primary">Test Button</md-button>
+      </md-card-header>
+    </md-card>
   </div>
 </template>
 
@@ -19,7 +17,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "home",
+  name: "Home",
   components: {
     HelloWorld
   }
@@ -36,7 +34,7 @@ export default {
     theme: light
   )
 );
-@import "~vue-material/dist/components/MdCard/theme";
+@import "~vue-material/dist/theme/all";
 .md-card {
   width: 500px;
   display: inline-block;

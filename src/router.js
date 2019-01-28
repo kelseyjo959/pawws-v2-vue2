@@ -8,22 +8,22 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       component: Home
     },
     {
       path: "/about",
-      name: "about",
+      name: "About",
       component: () => import("./views/About.vue")
     },
     {
       path: "/pets",
-      name: "pet-kennel",
+      name: "PetKennel",
       component: () => import("./views/PetKennel.vue")
     },
     {
       path: "/shelters",
-      name: "shelters",
+      name: "Shelters",
       component: () => import("./views/Shelters.vue")
     }
   ]

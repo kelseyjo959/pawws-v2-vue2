@@ -1,11 +1,30 @@
 <template>
   <div class="shelters">
-    <p>This is the shelter page</p>
+    <md-tabs md-theme="default-app" class="md-primary" md-alignment="centered">
+      <md-tab md-label="Stray Rescue"> 
+        <StrayRescue />
+      </md-tab>
+      <md-tab md-label="Young At Heart">
+        <YoungAtHeart />
+      </md-tab>
+      <md-tab md-label="NYC Shelter Buddy">
+        <NYCShelterBuddy />
+      </md-tab>
+    </md-tabs>
   </div>
 </template>
 
 <script>
+import StrayRescue from "../components/StrayRescue.vue";
+import YoungAtHeart from "../components/YoungAtHeart.vue";
+import NYCShelterBuddy from "../components/NYCShelterBuddy";
+
 export default {
-  name: "shelters"
+  name: "Shelters",
+  components: {
+    StrayRescue,
+    YoungAtHeart,
+    NYCShelterBuddy
+  }
 };
 </script>
