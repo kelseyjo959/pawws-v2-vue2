@@ -1,6 +1,6 @@
 <template>
   <div class="stray-rescue">
-    <h1>Stray Rescue</h1>
+    <h1>Stray Rescue of St. Louis</h1>
   </div>
 </template>
 
