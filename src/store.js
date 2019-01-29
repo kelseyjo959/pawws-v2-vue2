@@ -10,20 +10,25 @@ export default new Vuex.Store({
   state: {
     pets: []
   },
+  mutations: {
+    setPets(state, payload) {
+      state.pets = payload;
+    }
+  },
   actions: {
-    getPets() {
-      this.axios
-        .get("http://localhost:3000/getPets", {
+    async getPets({ commit }) {
+      try {
+        let response = await axios.get(`http://localhost:3000/getPets`, {
           headers: {
-            screenSize: window.innerWidth,
+            screenSize: window.width,
             shelter: "",
             count: 0
           }
-        })
-        .then(res => {
-          this.pets = res.data;
-        })
-        .catch(error => console.log(error));
+        });
+        commit("setPets", response.data);
+      } catch (error) {
+        commit("setPets", []);
+      }
     },
     test() {
       console.log("test");
