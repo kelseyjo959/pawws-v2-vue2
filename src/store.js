@@ -11,8 +11,8 @@ export default new Vuex.Store({
     pets: []
   },
   mutations: {
-    setPets(state, payload) {
-      state.pets = payload;
+    setPetState(state, responseData) {
+      state.pets = responseData;
     }
   },
   actions: {
@@ -25,13 +25,10 @@ export default new Vuex.Store({
             count: 0
           }
         });
-        commit("setPets", response.data);
+        commit("setPetState", response.data);
       } catch (error) {
-        commit("setPets", []);
+        commit("setPetState", []);
       }
-    },
-    test() {
-      console.log("test");
     }
   }
 });

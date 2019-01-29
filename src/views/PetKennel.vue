@@ -17,7 +17,6 @@ export default {
     PetDetails
   },
   mounted() {
-    this.$store.dispatch("test");
     this.$store.dispatch("getPets");
   },
   computed: {
