@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
-import axios from "axios";
 import PetKennel from "@/views/PetKennel.vue";
+import { existsSync } from "fs";
 
 jest.mock("axios", () => ({
   get: jest.fn(() =>
@@ -8,26 +8,28 @@ jest.mock("axios", () => ({
   )
 }));
 
+const mockStore = { dispatch: jest.fn()};
+
 describe("PetKennel", () => {
   it("calls axios GET, updates the data object with results, results are propagated to Child", done => {
     const wrapper = mount(PetKennel, {
-      data() {
-        return {
-          pets: []
-        };
+      mocks: {
+        $store: {
+          // state: { 
+          //   pets: [
+          //     {name: "Sloppy"},
+          //     {name: "Floppy"}
+          //   ]
+          // }
+          mockStore
+        }
       }
     });
 
+    wrapper.vm.$mount();
     wrapper.vm.$nextTick(() => {
-      expect(axios.get).toBeCalledWith("http://localhost:3000/getPets", {
-        headers: {
-          screenSize: window.width,
-          shelter: "",
-          count: 0
-        }
-      });
 
-      expect(wrapper.vm.pets).toEqual([{ name: "Sloppy" }, { name: "Floppy" }]);
+      expect(mockStore.dispatch).toHaveBeenCalledWith("getPets");
       expect(wrapper.html()).toMatch(/Sloppy/, /Floppy/);
       done();
     });
