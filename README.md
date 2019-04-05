@@ -38,7 +38,7 @@ npm run test:unit
 
 ### Bug Fixes
 
-Bug fix for [vue-warn]: Unknown custom element => node_modules/vue/dist/vue.runtime.common.js  line 401
+Bug fix for [vue-warn]: Unknown custom element => node_modules/vue/dist/vue.runtime.common.js  (line 401) ignoredElements: [/md/],
 
 ### Customize configuration
 
